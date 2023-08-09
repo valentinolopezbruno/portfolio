@@ -1,0 +1,439 @@
+<body>
+  <div class="contendor">
+    <div class="izquierda">
+      <div class="masInformacion">
+        <div> </div>
+        <div class="masopciones" (click)="mostrarRedesSociales()">
+          <span id="abrir" >Ver Contacto</span>
+        </div>
+    </div>
+      <div class="info-izquieda">
+        <div class="circulo">
+          <img src="assets/imagen.jpg" />
+        </div>
+        <div class="perfil-info">
+          <h1>Valentino López</h1>
+        <div class="ocupacion">
+          <p>Web Developer</p>
+        </div>
+        </div>
+      </div>
+
+      <div class="contenedorLinea">
+        <div class="linea"></div>
+      </div>
+      <div class="redes" id="redes" *ngIf="mostrarRedes">
+        <!-- MAIL -->
+        <div class="red">
+          <img src="assets/MAIL.png" alt="" />
+          <div class="contenidoRed">
+            <div class="nombreRed">
+              <p class="redMail">MAIL</p>
+            </div>
+            <p class="email">valentinolopezbruno@gmail.com</p>
+          </div>
+        </div>
+        <!-- LINKEDIN -->
+        <div class="red">
+          <a
+            class="enlaceRedes"
+            href="https://www.linkedin.com/in/valentinolopezbruno/"
+          >
+            <img src="assets/LINKEDIN.png" alt="" />
+            <div class="contenidoRed">
+              <div class="nombreRed">
+                <p class="redMail">LINKEDIN</p>
+              </div>
+              <p>valentinolopezbruno</p>
+            </div>
+          </a>
+        </div>
+        <!-- TELEFONO -->
+        <div class="red">
+          <img src="assets/TELEFONO.png" alt="" />
+          <div class="contenidoRed">
+            <div class="nombreRed">
+              <p class="redMail">CONTACTO</p>
+            </div>
+            <p>+54 (353) 422-3573</p>
+          </div>
+        </div>
+        <!-- UBICACION -->
+        <div class="red">
+          <img src="assets/UBICACION.png" alt="" />
+          <div class="contenidoRed">
+            <div class="nombreRed">
+              <p class="redMail">UBICACION</p>
+            </div>
+            <p>Villa María, Cordoba</p>
+          </div>
+        </div>
+        <!-- GITHUB -->
+        <div class="red github">
+          <a
+            class="enlaceRedes github2"
+            href="https://github.com/valentinolopezbruno"
+          >
+            <img src="assets/GITHUB.png" alt="" />
+            <div class="contenidoRed">
+              <div class="nombreRed">
+                <p class="redMail">GITHUB</p>
+              </div>
+              <p>valentinolopezbruno</p>
+            </div>
+          </a>
+        </div>
+        <!-- INSTAGRAM -->
+        <div class="red">
+          <a
+            class="enlaceRedes"
+            href="https://www.instagram.com/valentino.lopez1/"
+          >
+            <img src="assets/INSTAGRAM.png" alt="" />
+            <div class="contenidoRed">
+              <div class="nombreRed">
+                <p class="redMail">INSTAGRAM</p>
+              </div>
+              <p>valentino.lopez1</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- COLUMNA DERECHA -->
+    <div class="derecha">
+
+      <div class="headerDerecha">
+        <h1>{{ InfoSeleccionada }}</h1>
+        <div class="nav">
+          <div class="opciones">
+            <span
+              (click)="cambiarInfoSeleccinada('Información')"
+              class="tipoInfo"
+              >Informacion</span
+            >
+            <span
+              (click)="cambiarInfoSeleccinada('Experiencia')"
+              class="tipoInfo"
+              >Experiencia</span
+            >
+            <span
+              (click)="cambiarInfoSeleccinada('Portafolio')"
+              class="tipoInfo"
+              >Portafolio</span
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="bodyDerecha">
+        <div class="linea-roja"></div>
+
+        <div *ngIf="InfoSeleccionada == 'Información'">
+          <div class="textosP">
+            <p>
+              Actualmente, tengo 21 años, me encuentro cursando el cuarto año de
+              la carrera Ingeniería en Sistemas de Información en la Universidad
+              Tecnológica Nacional (UTNFRVM), en mis tiempos libres me dedico a
+              hacer lo que me gusta, principalmente programar, es algo que me
+              divierte y me motiva a superarme personalmente cada día. En el
+              tiempo que llevo haciendo esto he trabajado en diferentes
+              asociaciones y empresas. Me gusta mucho el desarrollo Web, pero
+              también me gusta aprender nuevas tecnologías en las que encuentre
+              un futuro.
+            </p>
+            <p>
+              Utilizo la mayoría de mi tiempo para mejorar y romper las paredes
+              que me impidan lograr mis metas. Además de eso, siempre priorizo
+              hacer mis trabajos como si fueran para mí. Actualmente manejo a
+              profundidad tecnologías como Node.js y sus frameworks, CSS, HTML,
+              JS, TS, MYSQL, MongoDB, Angular, ReactJS, Wordpres y Woocommerce.
+            </p>
+            <p>
+              En constante aprendizaje para seguir creciendo profesionalmente.
+            </p>
+            <h2>¿Qué puedo hacer?</h2>
+          </div>
+          <div class="cardsInfo">
+            <div class="contenedor-flex">
+              <div class="columna">
+                <div class="card">
+                  <img src="assets/CHECK.png" alt="Imagen 1" />
+                  <div class="card-content">
+                    <h2>Diseño tu sitio Web</h2>
+                    <p>
+                      Puedo trabajar en la estetica y funcionalidades
+                      especificas de tu pagina web, adaptandome a tus
+                      necesidades y pedidos
+                    </p>
+                  </div>
+                </div>
+                <div class="card">
+                  <img src="assets/CHECK.png" alt="Imagen 2" />
+                  <div class="card-content">
+                    <h2>Desarrollo Web</h2>
+                    <p>
+                      Puedo desarrollar cualquier funcionalidad de tu pagina Web
+                      utilizando NodeJs y Php
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="columna">
+                <div class="card">
+                  <img src="assets/CHECK.png" alt="Imagen 3" />
+                  <div class="card-content">
+                    <h2>Manejo de Bases de Datos</h2>
+                    <p>
+                      Puedo dieñar tu base de datos para que guardes y protejas
+                      toda tu informacion con MYSQL, PostgreSQL o MondoDB
+                    </p>
+                  </div>
+                </div>
+                <div class="card">
+                  <img src="assets/CHECK.png" alt="Imagen 4" />
+                  <div class="card-content">
+                    <h2>Aprendo tecnologias facilmente</h2>
+                    <p>
+                      Puedo aprender tecnologias con facilidad y soy flexible
+                      frente a cualquier ambiente laboral.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="habilidades">
+            <h2>Mis Habilidades</h2>
+            <!--  Desarollo -->
+            <div class="skills">
+              <div class="detalles">
+                <span> Desarrollo </span>
+                <span>90%</span>
+              </div>
+              <div class="menu">
+                <div id="desarrollo-menu"></div>
+              </div>
+            </div>
+            <!--  Velocidad -->
+            <div class="skills">
+              <div class="detalles">
+                <span> Velocidad </span>
+                <span>90%</span>
+              </div>
+              <div class="menu">
+                <div id="velocidad-menu"></div>
+              </div>
+            </div>
+            <!--  Backend -->
+            <div class="skills">
+              <div class="detalles">
+                <span> Backend </span>
+                <span>80%</span>
+              </div>
+              <div class="menu">
+                <div id="backend-menu"></div>
+              </div>
+            </div>
+            <!--  Aprendizaje -->
+            <div class="skills">
+              <div class="detalles">
+                <span> Aprendizaje </span>
+                <span>80%</span>
+              </div>
+              <div class="menu">
+                <div id="aprendizaje-menu"></div>
+              </div>
+            </div>
+            <!--  Diseño -->
+            <div class="skills">
+              <div class="detalles">
+                <span> Diseño </span>
+                <span>70%</span>
+              </div>
+              <div class="menu">
+                <div id="disenio-menu"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div *ngIf="InfoSeleccionada === 'Experiencia'" class="experiencia">
+          <div class="timeline-content"></div>
+          <div class="timeline">
+            <div class="container izquierda-container">
+              <div class="text-box intertron">
+                <a href="https://grupointertron.com/"
+                  ><img src="assets/INTERTRON.webp" alt=""
+                /></a>
+                <h2>Intertron IT</h2>
+                <small>2020-2021</small>
+                <p>Frontend Dev. - Trainee</p>
+              </div>
+            </div>
+
+            <div class="container derecha-container">
+              <div class="text-box">
+                <a href="https://escribaniagomezgianelli.com/"
+                  ><img class="escribania" src="assets/ESCRIBANIA.png" alt=""
+                /></a>
+                <h2>Escribania Gomez Gianelli</h2>
+                <small>2020-2021</small>
+                <p>Web Dev (HTML, CSS, Js)</p>
+              </div>
+            </div>
+
+            <div class="container izquierda-container">
+              <div class="text-box">
+                <a href="https://tuttobene.online/"
+                  ><img class="tutto" src="assets/TUTTOBENE.svg" alt=""
+                /></a>
+                <h2>Tutto Bene</h2>
+                <small>2021-2022</small>
+                <p>Backend dev. (NodeJs, MYSQK, Php, ReactJS.)</p>
+                <p>Frontend dev. (HTML, CSS, Styled-Components)</p>
+              </div>
+            </div>
+
+            <div class="container derecha-container">
+              <div class="text-box">
+                <a href="https://moahweb.com.ar/"
+                  ><img class="moahweb" src="assets/MOAH.png" alt=""
+                /></a>
+                <h2>Moah Desarrollo Web</h2>
+                <small>2022-2023</small>
+                <p>Backend dev. (NodeJs, MYSL, Angular)</p>
+                <p>Frontend (HTML, CSS, Wordpress)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div *ngIf="InfoSeleccionada === 'Portafolio'" class="portafolio">
+          <div class="proyectos">
+            <div class="proyectos-card">
+              <img src="assets/TUTTOBENE.PNG" alt="" />
+              <div class="capa">
+                <a href="https://tuttobene.online/"
+                  ><img src="assets/EYE.png" alt=""
+                /></a>
+              </div>
+              <div class="textos-portafolio">
+                <h3>Tutto Bene</h3>
+                <p>Ecommcerce (Web + Admin completo + BD + MP)</p>
+              </div>
+            </div>
+
+            <div class="proyectos-card">
+              <img src="assets/keepandmove.jpg" alt="" />
+              <div class="capa">
+                <a href="https://keepandmove.com/"
+                  ><img src="assets/EYE.png" alt=""
+                /></a>
+              </div>
+              <div class="textos-portafolio">
+                <h3>Keepandmove</h3>
+                <p>Web Informacional</p>
+              </div>
+            </div>
+
+            <div class="proyectos-card">
+              <img src="assets/TOMYPETS.PNG" alt="" />
+              <div class="capa">
+                <a href="https://tommypets.com.ar/"
+                  ><img src="assets/EYE.png" alt=""
+                /></a>
+              </div>
+              <div class="textos-portafolio">
+                <h3>Tommy Pets</h3>
+                <p>Ecommcerce (Mayorista + Minorista + Pagos)</p>
+              </div>
+            </div>
+
+            <div class="proyectos-card">
+              <img src="assets/optica.png" alt="" />
+              <div class="capa">
+                <a href="https://opticalaferrere.com/"
+                  ><img src="assets/EYE.png" alt=""
+                /></a>
+              </div>
+              <div class="textos-portafolio">
+                <h3>Optica LaFerrere</h3>
+                <p>Web Informacional + Ecommerce + Pagos</p>
+              </div>
+            </div>
+
+            <div class="proyectos-card">
+              <img src="assets/POWER.PNG" alt="" />
+              <div class="capa">
+                <a href="https://powercumbia.com/"
+                  ><img src="assets/EYE.png" alt=""
+                /></a>
+              </div>
+              <div class="textos-portafolio">
+                <h3>Power Cumbia</h3>
+                <p>Web Informacional + Reservas</p>
+              </div>
+            </div>
+
+            <div class="proyectos-card">
+              <img src="assets/cerrajeria-1.png" alt="" />
+              <div class="capa">
+                <a href="https://labelargentina.com/"
+                  ><img src="assets/EYE.png" alt=""
+                /></a>
+              </div>
+              <div class="textos-portafolio">
+                <h3>Labelar</h3>
+                <p>Web Informacional</p>
+              </div>
+            </div>
+
+            <div class="proyectos-card">
+              <img src="assets/learn.jpg" alt="" />
+              <div class="capa">
+                <a href="http://www.cursoslearnsalud.com/"
+                  ><img src="assets/EYE.png" alt=""
+                /></a>
+              </div>
+              <div class="textos-portafolio">
+                <h3>Learn Salud</h3>
+                <p>Web Informacional</p>
+              </div>
+            </div>
+
+            <div class="proyectos-card">
+              <img src="assets/coachin.jpg" alt="" />
+              <div class="capa">
+                <a href="http://www.humaninstitute.net/coaching"
+                  ><img src="assets/EYE.png" alt=""
+                /></a>
+              </div>
+              <div class="textos-portafolio">
+                <h3>Human Institute</h3>
+                <p>Web Informacional + Inscripciones</p>
+              </div>
+            </div>
+
+            <div class="proyectos-card">
+              <img src="assets/GO.PNG" alt="" />
+              <div class="capa">
+                <a href="https://www.youtube.com/watch?v=HMWuUNFGBZ8"
+                  ><img src="assets/EYE.png" alt=""
+                /></a>
+              </div>
+              <div class="textos-portafolio">
+                <h3>Registro Pedidos Golang</h3>
+                <p>Uno de mis primeros proyectos con Go</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+
+<router-outlet></router-outlet>
