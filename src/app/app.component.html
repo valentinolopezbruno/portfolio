@@ -14,7 +14,7 @@
         <div class="perfil-info">
           <h1>Valentino López</h1>
         <div class="ocupacion">
-          <p>Web Developer</p>
+          <p>Software Developer</p>
         </div>
         </div>
       </div>
@@ -28,9 +28,12 @@
           <img src="assets/MAIL.png" alt="" />
           <div class="contenidoRed">
             <div class="nombreRed">
+             
               <p class="redMail">MAIL</p>
             </div>
-            <p class="email">valentinolopezbruno@gmail.com</p>
+            <a href="mailto:valentinolopezbruno@gmail.com">
+            <p class="email" >valentinolopezbruno@gmail.com</p>
+          </a>
           </div>
         </div>
         <!-- LINKEDIN -->
@@ -56,11 +59,12 @@
               <p class="redMail">CONTACTO</p>
             </div>
             <p>+54 (353) 422-3573</p>
+            <p>+1 (406) 550-6655</p>
           </div>
         </div>
         <!-- UBICACION -->
         <div class="red">
-
+          <img src="assets/UBICACION.png" alt="" />
           <div class="contenidoRed">
             <div class="nombreRed">
               <p class="redMail">UBICACION</p>
@@ -132,22 +136,22 @@
         <div *ngIf="InfoSeleccionada == 'Información'">
           <div class="textosP">
             <p>
-              Actualmente, tengo 21 años, me encuentro cursando el cuarto año de
+              Actualmente, tengo 22 años, me encuentro cursando el cuarto año de
               la carrera Ingeniería en Sistemas de Información en la Universidad
               Tecnológica Nacional (UTNFRVM), en mis tiempos libres me dedico a
-              hacer lo que me gusta, principalmente programar, es algo que me
+              hacer lo que me gusta, principalmente desarrollar y emprender porque es algo que me
               divierte y me motiva a superarme personalmente cada día. En el
               tiempo que llevo haciendo esto he trabajado en diferentes
               asociaciones y empresas. Me gusta mucho el desarrollo Web, pero
-              también me gusta aprender nuevas tecnologías en las que encuentre
+              también me agrada aprender nuevas tecnologías en las que encuentre
               un futuro.
             </p>
             <p>
               Utilizo la mayoría de mi tiempo para mejorar y romper las paredes
               que me impidan lograr mis metas. Además de eso, siempre priorizo
               hacer mis trabajos como si fueran para mí. Actualmente manejo a
-              profundidad tecnologías como Node.js y sus frameworks, CSS, HTML,
-              JS, TS, MYSQL, MongoDB, Angular, ReactJS, Wordpres y Woocommerce.
+              profundidad tecnologías como CSS, HTML,
+              JS, TS, Java, MYSQL, MongoDB, Angular, ReactJS, Wordpres.
             </p>
             <p>
               En constante aprendizaje para seguir creciendo profesionalmente.
@@ -174,7 +178,7 @@
                     <h2>Desarrollo Web</h2>
                     <p>
                       Puedo desarrollar cualquier funcionalidad de tu pagina Web
-                      utilizando NodeJs y Php
+                      utilizando Javascript, Typescript o Php.
                     </p>
                   </div>
                 </div>
@@ -185,7 +189,7 @@
                   <div class="card-content">
                     <h2>Manejo de Bases de Datos</h2>
                     <p>
-                      Puedo dieñar tu base de datos para que guardes y protejas
+                      Puedo diseñar tu base de datos para que guardes y protejas
                       toda tu informacion con MYSQL, PostgreSQL o MondoDB
                     </p>
                   </div>
@@ -193,10 +197,9 @@
                 <div class="card">
                   <img src="assets/CHECK.png" alt="Imagen 4" />
                   <div class="card-content">
-                    <h2>Aprendo tecnologias facilmente</h2>
+                    <h2>Pasarelas de Pagos</h2>
                     <p>
-                      Puedo aprender tecnologias con facilidad y soy flexible
-                      frente a cualquier ambiente laboral.
+                      Puedo conectar tu sistemas con cuaqluier pasarela de pagos de forma segura.
                     </p>
                   </div>
                 </div>
@@ -261,7 +264,7 @@
         <div *ngIf="InfoSeleccionada === 'Experiencia'" class="experiencia">
           <div class="timeline-content"></div>
           <div class="timeline">
-            <div class="container izquierda-container">
+            <!-- <div class="container izquierda-container">
               <div class="text-box intertron">
                 <a href="https://grupointertron.com/"
                   ><img src="assets/INTERTRON.webp" alt=""
@@ -270,30 +273,7 @@
                 <small>2020-2021</small>
                 <p>Frontend Dev. - Trainee</p>
               </div>
-            </div>
-
-            <div class="container derecha-container">
-              <div class="text-box">
-                <a href="https://escribaniagomezgianelli.com/"
-                  ><img class="escribania" src="assets/ESCRIBANIA.png" alt=""
-                /></a>
-                <h2>Escribania Gomez Gianelli</h2>
-                <small>2020-2021</small>
-                <p>Web Dev (HTML, CSS, Js)</p>
-              </div>
-            </div>
-
-            <div class="container izquierda-container">
-              <div class="text-box">
-                <a href="https://pastastuttobene.com/"
-                  ><img class="tutto" src="assets/TUTTOBENE.svg" alt=""
-                /></a>
-                <h2>Tutto Bene</h2>
-                <small>2021-2022</small>
-                <p>Backend dev. (NodeJs, MYSQK, Php, ReactJS.)</p>
-                <p>Frontend dev. (HTML, CSS, Styled-Components)</p>
-              </div>
-            </div>
+            </div> -->
 
             <div class="container derecha-container">
               <div class="text-box">
@@ -306,47 +286,111 @@
                 <p>Frontend (HTML, CSS, Wordpress)</p>
               </div>
             </div>
+
+            <div class="container izquierda-container">
+              <div class="text-box">
+                <a href="https://stable.com.ar/"
+                  ><img class="stable" src="assets/logonavegador.png" alt=""
+                /></a>
+                <h2>Stable Software</h2>
+                <small>2024</small>
+                <p>Backend dev. (NodeJs, Typescript, Php, MYSQL)</p>
+              </div>
+            </div>
           </div>
         </div>
 
         <div *ngIf="InfoSeleccionada === 'Portafolio'" class="portafolio">
+
+          <nav class="navbar-proyectos">
+            <ul >
+              <li [ngClass]="{'activo': InfoSeleccionadaProyectos === 'Todos'}" (click)="InfoSeleccionadaProyectos = 'Todos'">Todos</li>
+              <li [ngClass]="{'activo': InfoSeleccionadaProyectos === 'Sistemas'}" (click)="InfoSeleccionadaProyectos = 'Sistemas'">Sistemas</li>
+              <li [ngClass]="{'activo': InfoSeleccionadaProyectos === 'Informacional'}" (click)="InfoSeleccionadaProyectos = 'Informacional'">Informacional</li>
+            </ul>
+          </nav>
+
+          <!-- COMIENZO A MOSTRAR LOS PROYECTOS REALIZADOS -->
           <div class="proyectos">
-            <div class="proyectos-card">
-              <img src="assets/tuttobene.png" alt="" />
+
+            <!-- SI EL USUARIO PRESIONA TODOS O SISTEMAS EN LA NAVBAR  -->
+            <ng-container *ngIf="InfoSeleccionadaProyectos === 'Todos' || InfoSeleccionadaProyectos === 'Sistemas'">
+
+              <div class="proyectos-card">
+                <img src="assets/brilloextremo.png" alt="brilloextremo" />
+                <div class="capa">
+                  <a href="https://www.brilloextremovm.com/inicio"
+                    ><img src="assets/EYE.png" alt="brilloextremo"
+                  /></a>
+                </div>
+                <div class="textos-portafolio">
+                  <h3>Brillo Extremo</h3>
+                  <p>Ecommcerce (Ecommecerce, Admin, Pagos, Reportes)</p>
+                </div>
+              </div>
+            
+              <div class="proyectos-card">
+              <img src="assets/tuttobene.png" alt="tuttobene" />
               <div class="capa">
                 <a href="https://pastastuttobene.com/"
-                  ><img src="assets/EYE.png" alt=""
+                  ><img src="assets/EYE.png" alt="tuttobene"
                 /></a>
               </div>
               <div class="textos-portafolio">
                 <h3>Tutto Bene</h3>
-                <p>Ecommcerce (Web + Admin completo + BD + MP)</p>
+                <p>Ecommcerce (Ecommecerce, Admin, Pagos, Reportes)</p>
               </div>
             </div>
 
             <div class="proyectos-card">
-              <img src="assets/stable.png" alt="" />
+              <img src="assets/leibnitz.png" alt="leibnitz" />
               <div class="capa">
-                <a href="https://stable.com.ar/"
-                  ><img src="assets/EYE.png" alt=""
+                <a href="https://leibnitz.edu.ar/"
+                  ><img src="assets/EYE.png" alt="leibnitz"
                 /></a>
               </div>
               <div class="textos-portafolio">
-                <h3>Stable Softare</h3>
+                <h3>Instituto Leibnitz</h3>
+                <p>Web Informacional + Campus</p>
+              </div>
+            </div>
+
+            <div class="proyectos-card">
+              <img src="assets/lachampion.png" alt="distribuidoralachampion" />
+              <div class="capa">
+                <a href="https://distribuidoralachampion.com/"
+                  ><img src="assets/EYE.png" alt="distribuidoralachampion"
+                /></a>
+              </div>
+              <div class="textos-portafolio">
+                <h3>La Champion</h3>
                 <p>Web Informacional</p>
               </div>
             </div>
 
             <div class="proyectos-card">
-              <img src="assets/keepandmove.jpg" alt="" />
+              <img src="assets/mountainvapes.png" alt="mountainvapes" />
               <div class="capa">
-                <a href="https://keepandmove.com/"
-                  ><img src="assets/EYE.png" alt=""
+                <a href="https://mountainvape.com.ar/"
+                  ><img src="assets/EYE.png" alt="mountainvapes"
                 /></a>
               </div>
               <div class="textos-portafolio">
-                <h3>Keepandmove</h3>
-                <p>Web Informacional</p>
+                <h3>Mountainvapes</h3>
+                <p>Ecommcerce</p>
+              </div>
+            </div>
+
+            <div class="proyectos-card">
+              <img src="assets/factory.png" alt="factory" />
+              <div class="capa">
+                <a href="https://factoryairguns.com/"
+                  ><img src="assets/EYE.png" alt="factory"
+                /></a>
+              </div>
+              <div class="textos-portafolio">
+                <h3>Factory Airguns</h3>
+                <p>Ecommcerce + Reparaciones</p>
               </div>
             </div>
 
@@ -359,7 +403,20 @@
               </div>
               <div class="textos-portafolio">
                 <h3>Tommy Pets</h3>
-                <p>Ecommcerce (Mayorista + Minorista + Pagos)</p>
+                <p>Ecommcerce (Mayorista, Minorista, Pagos)</p>
+              </div>
+            </div>
+
+            <div class="proyectos-card">
+              <img src="assets/misseguidores.PNG" alt="" />
+              <div class="capa">
+                <a href="https://misseguidores.com/home"
+                  ><img src="assets/EYE.png" alt=""
+                /></a>
+              </div>
+              <div class="textos-portafolio">
+                <h3>Misseguidores</h3>
+                <p>Ecommcerce, Admin, Mercadopago, Paypal</p>
               </div>
             </div>
 
@@ -372,81 +429,127 @@
               </div>
               <div class="textos-portafolio">
                 <h3>Optica LaFerrere</h3>
-                <p>Web Informacional + Ecommerce + Pagos</p>
+                <p>Web Informacional, Ecommerce, Pagos</p>
               </div>
             </div>
+            </ng-container>
 
-            <div class="proyectos-card">
-              <img src="assets/POWER.PNG" alt="" />
-              <div class="capa">
-                <a href="https://powercumbia.com/"
-                  ><img src="assets/EYE.png" alt=""
-                /></a>
+                       <!-- SI EL USUARIO PRESIONA TODOS O INFORMACIONAL EN LA NAVBAR  -->
+            <ng-container *ngIf="InfoSeleccionadaProyectos === 'Todos' || InfoSeleccionadaProyectos === 'Informacional'">
+              <div class="proyectos-card">
+                <img src="assets/ttc.PNG" alt="" />
+                <div class="capa">
+                  <a href="https://titcangross.com.ar/"
+                    ><img src="assets/EYE.png" alt=""
+                  /></a>
+                </div>
+                <div class="textos-portafolio">
+                  <h3>Tit Can Gross</h3>
+                  <p>Web Informacional</p>
+                </div>
               </div>
-              <div class="textos-portafolio">
-                <h3>Power Cumbia</h3>
-                <p>Web Informacional + Reservas</p>
+  
+              <div class="proyectos-card">
+                <img src="assets/stable.png" alt="" />
+                <div class="capa">
+                  <a href="https://stable.com.ar/"
+                    ><img src="assets/EYE.png" alt=""
+                  /></a>
+                </div>
+                <div class="textos-portafolio">
+                  <h3>Stable Softare</h3>
+                  <p>Web Informacional</p>
+                </div>
               </div>
-            </div>
-
-            <div class="proyectos-card">
-              <img src="assets/cerrajeria-1.png" alt="" />
-              <div class="capa">
-                <a href="https://labelargentina.com/"
-                  ><img src="assets/EYE.png" alt=""
-                /></a>
+  
+              <div class="proyectos-card">
+                <img src="assets/keepandmove.jpg" alt="" />
+                <div class="capa">
+                  <a href="https://keepandmove.com/"
+                    ><img src="assets/EYE.png" alt=""
+                  /></a>
+                </div>
+                <div class="textos-portafolio">
+                  <h3>Keepandmove</h3>
+                  <p>Web Informacional</p>
+                </div>
               </div>
-              <div class="textos-portafolio">
-                <h3>Labelar</h3>
-                <p>Web Informacional</p>
+  
+              <div class="proyectos-card">
+                <img src="assets/POWER.PNG" alt="" />
+                <div class="capa">
+                  <a href="https://powercumbia.com/"
+                    ><img src="assets/EYE.png" alt=""
+                  /></a>
+                </div>
+                <div class="textos-portafolio">
+                  <h3>Power Cumbia</h3>
+                  <p>Web Informacional, Reservas</p>
+                </div>
               </div>
-            </div>
-
-            <div class="proyectos-card">
-              <img src="assets/learn.jpg" alt="" />
-              <div class="capa">
-                <a href="http://www.cursoslearnsalud.com/"
-                  ><img src="assets/EYE.png" alt=""
-                /></a>
+  
+              <div class="proyectos-card">
+                <img src="assets/cerrajeria-1.png" alt="" />
+                <div class="capa">
+                  <a href="https://labelargentina.com/"
+                    ><img src="assets/EYE.png" alt=""
+                  /></a>
+                </div>
+                <div class="textos-portafolio">
+                  <h3>Labelar</h3>
+                  <p>Web Informacional</p>
+                </div>
               </div>
-              <div class="textos-portafolio">
-                <h3>Learn Salud</h3>
-                <p>Web Informacional</p>
+  
+              <div class="proyectos-card">
+                <img src="assets/learn.jpg" alt="" />
+                <div class="capa">
+                  <a href="http://www.cursoslearnsalud.com/"
+                    ><img src="assets/EYE.png" alt=""
+                  /></a>
+                </div>
+                <div class="textos-portafolio">
+                  <h3>Learn Salud</h3>
+                  <p>Web Informacional</p>
+                </div>
               </div>
-            </div>
-
-            <div class="proyectos-card">
-              <img src="assets/coachin.jpg" alt="" />
-              <div class="capa">
-                <a href="http://www.humaninstitute.net/coaching"
-                  ><img src="assets/EYE.png" alt=""
-                /></a>
+  
+              <div class="proyectos-card">
+                <img src="assets/coachin.jpg" alt="" />
+                <div class="capa">
+                  <a href="http://www.humaninstitute.net/coaching"
+                    ><img src="assets/EYE.png" alt=""
+                  /></a>
+                </div>
+                <div class="textos-portafolio">
+                  <h3>Human Institute</h3>
+                  <p>Web Informacional, Inscripciones</p>
+                </div>
               </div>
-              <div class="textos-portafolio">
-                <h3>Human Institute</h3>
-                <p>Web Informacional + Inscripciones</p>
+  
+              <div class="proyectos-card">
+                <img src="assets/GO.PNG" alt="" />
+                <div class="capa">
+                  <a href="https://www.youtube.com/watch?v=HMWuUNFGBZ8"
+                    ><img src="assets/EYE.png" alt=""
+                  /></a>
+                </div>
+                <div class="textos-portafolio">
+                  <h3>Registro Pedidos Golang</h3>
+                  <p>Uno de mis primeros proyectos con Go</p>
+                </div>
               </div>
-            </div>
-
-            <div class="proyectos-card">
-              <img src="assets/GO.PNG" alt="" />
-              <div class="capa">
-                <a href="https://www.youtube.com/watch?v=HMWuUNFGBZ8"
-                  ><img src="assets/EYE.png" alt=""
-                /></a>
-              </div>
-              <div class="textos-portafolio">
-                <h3>Registro Pedidos Golang</h3>
-                <p>Uno de mis primeros proyectos con Go</p>
-              </div>
-            </div>
+            </ng-container>
+           
           </div>
         </div>
       </div>
     </div>
   </div>
-
-
+  <script
+  src="https://unpkg.com/react-stackai@latest/dist/vanilla/vanilla-stackai.js"
+  data-project-url="https://www.stack-ai.com/embed/43bc8df0-72d3-476d-8114-f631c97249e3/bdd4161f-9394-4e55-9a9f-3c9d9e52f117/65d94a0f39d433abc161f8dd">
+</script>
 </body>
 
 <router-outlet></router-outlet>

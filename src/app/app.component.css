@@ -50,7 +50,6 @@
 
   .contendor {
     display: flex;
-  
   }
   
   .izquierda {
@@ -64,7 +63,7 @@
     border-radius: 20px;
     margin-top: 30px;
     padding-top: 30px;
-    min-height: 1000px;
+    border: 1px solid hsl(0, 0%, 22%);
   }
 
   .masInformacion{
@@ -87,7 +86,7 @@
     padding: 10px;
     box-shadow: none;
     background: hsla(240, 1%, 17%, 0.75);
-    border: 1px solid var(--jet);
+    border: 1px solid hsl(0, 0%, 22%);
     visibility: inherit;
     max-width: auto;
     /* padding: 20px; */ /* No es necesario repetir padding dos veces */
@@ -146,16 +145,14 @@
   }
   
   .redes img{
-      height: 40px;
-      width: 4cap;
-      transition: all 300ms; 
-      
-  }
+    height: 40px;
+    width: 40px; /* Aquí es donde necesitas realizar el ajuste */
+    transition: all 300ms; 
+}
 
-
-  .redes img:hover{
+.redes img:hover{
     transform: scale(1.5);
-  }
+}
   
   .red{
       display: flex;
@@ -194,8 +191,11 @@
       color: gray;
   }
   
-  .redMail{
+  .contenidoRed a{
       margin: 0;
+      text-decoration: none !important;
+      color: white !important; /* Esto mantiene el color predeterminado del texto */
+
   }
 
 
@@ -204,10 +204,10 @@
   background-color: hsl(240, 2%, 12%);
   width: 70%;
   margin-left: 3rem;
-  border: 1px solid var(--jet);
-  border-radius: 0 20px;
+  border-radius: 20px !important; 
   margin-top: 30px;
   position: relative;
+  border: 1px solid hsl(0, 0%, 22%);;
 }
 
 .headerDerecha{
@@ -221,10 +221,11 @@
   /* left: auto; */ /* Puedes eliminar estas líneas ya que left y top no tienen efecto con position absolute */
   /* right: 0; */ /* Puedes eliminar estas líneas ya que left y top no tienen efecto con position absolute */
   border-radius: 0 20px;
+  z-index: 2;
   /* padding: 0 20px; */
   box-shadow: none;
-  background: hsla(240, 1%, 17%, 0.75);
-  border: 1px solid var(--jet);
+  background: hsla(240, 1%, 17%, 0.75); 
+  border: 1px solid hsl(0, 0%, 22%);
   visibility: inherit;
   max-width: auto;
   /* padding: 20px; */ /* No es necesario repetir padding dos veces */
@@ -240,6 +241,7 @@
 
 .opciones{
   text-align: right;
+  position: relative;
   display:inline-block;
   text-align: center;
   margin:5px;
@@ -247,10 +249,11 @@
   font: inherit;
   cursor: pointer;
   font-weight: bold;
+  z-index: 2;
 }
 
 .opciones span:hover{
- color:gray; 
+ color:rgb(230, 55, 53);
 }
 
 .tipoInfo{
@@ -262,21 +265,24 @@
   margin-top: 30px;
   width: 30%;
   height: 2px;
-  background-color: #5B1212;
+  background-color: rgb(230, 55, 53);
 }
 
 .textosP{
-  padding: 30px;
+  padding: 15px;
 }
 
 .textosP p{
-  text-align: justify;
-  margin-top: 30px;
+  margin-top: 10px;
+  font-size: 15px;
 }
+
 
 .textosP h2{
   text-align: justify;
-  margin-top: 30px;
+  margin-top: 25px;
+  font-size: 24px;
+  font-weight: bold;
 }
 
 .contenedor-flex {
@@ -290,12 +296,19 @@
   
 }
 
+.cardsInfo p{
+  font-size: 15px;
+}
+.cardsInfo h2{
+  font-size: 24px;
+}
+
 
 .card {
   width: 100%;
   gap: 18px;
   padding: 30px;
-  margin-top: 20px;
+  margin-top: 15px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   display: flex;
@@ -323,9 +336,6 @@
   }
 }
 
-
-
-
 .card img {
   width: 40px;  
   height: 40px;
@@ -348,8 +358,8 @@
 
 .habilidades{
  /*  position: absolute; */
-  margin: 30px;
-  width: 95%;
+  margin: 10px;
+  width: 98%;
   min-width: 590px;
   padding: 30px;
   border-radius: 10px;
@@ -375,7 +385,7 @@ box-shadow: 0px 0px 10px 1px rgba(20,20,20,1);
 
 .menu{
   position: relative;
-  border: 1px solid #5B1212;
+  border: 1px solid rgb(230, 55, 53);
   border-radius: 20px;
 }
 
@@ -384,7 +394,7 @@ box-shadow: 0px 0px 10px 1px rgba(20,20,20,1);
   width: 0;
   height: 8px;
   border-radius: 10px;
-  background-color: #5B1212;
+  background-color: rgb(230, 55, 53);
 }
 
 /* ANIMACION BARRAS */
@@ -443,6 +453,7 @@ box-shadow: 0px 0px 10px 1px rgba(20,20,20,1);
 
 .experiencia{
   position: relative;
+  z-index: 1 !important;
 }
 
 .timeline{
@@ -453,6 +464,7 @@ box-shadow: 0px 0px 10px 1px rgba(20,20,20,1);
 .container{
   padding:10px, 50px;
   position: relative;
+  z-index: 1;
   width: 50%;
   --border-gradient-onyx: linear-gradient( to bottom right, hsl(0, 0%, 25%) 0%, hsla(0, 0%, 25%, 0) 50% );
   --bg-gradient-jet: linear-gradient( to bottom right, hsla(240, 1%, 18%, 0.251) 0%, hsla(240, 2%, 11%, 0) 100% ), hsl(240, 2%, 13%);
@@ -495,6 +507,7 @@ box-shadow: 0px 0px 10px 1px rgba(20,20,20,1);
   padding: 20px;
   position: relative;
   border-radius: 10px;
+  z-index: 1 !important;
   font-size: 15px;
   -webkit-box-shadow: 0px 0px 10px 1px rgba(20,20,20,1);
 -moz-box-shadow: 0px 0px 10px 1px rgba(20,20,20,1);
@@ -517,6 +530,8 @@ box-shadow: 0px 0px 10px 1px rgba(20,20,20,1);
 
 .izquierda-container{
   left:-16px;
+  position: relative;
+  z-index: 1;
 }
 
 .derecha-container{
@@ -538,25 +553,25 @@ box-shadow: 0px 0px 10px 1px rgba(20,20,20,1);
   z-index:10;
 }
 
+.stable{
+  width: 140px !important;
+  height: 100px !important;
+  margin-right: 30px;
+  margin-top: 0 !important;
+}
+
 .moahweb{
   height: 70px;
   width: 70px !important;
 }
 
-.tutto{
-  height: 70px;
-}
-
-.escribania{
-  height: 60px;
-}
 
 .timeline::before{
   content: '';
   position: absolute;
   width: 4px;
   height: 100%;
-  background-color:#5B1212;
+  background-color:rgb(230, 55, 53);
   left: 50%;
   animation: moveline 6s linear forwards;
 }
@@ -622,6 +637,19 @@ box-shadow: 0px 0px 10px 1px rgba(20,20,20,1);
 
 /*------------------------------------------------- PORTAFOLIO ----------------------------------------*/
 
+.navbar-proyectos ul{
+  display: flex;
+}
+
+.navbar-proyectos li{
+  margin: 10px;
+  list-style: none;
+}
+
+.navbar-proyectos ul li.activo {
+  color: rgb(230, 55, 53);
+}
+
 
 .portafolio{
   margin:30px;
@@ -640,46 +668,39 @@ box-shadow: 0px 0px 10px 1px rgba(20,20,20,1);
 }
 
 .proyectos-card img{
-  width: 370px;
-  height: 230px;
+  width: 304px;
+  height: 194px;
   border-radius: 15px;
+  object-fit: cover;
 }
 
 
 .proyectos-card{
   position: relative;
-  padding: 20px;
   border-radius: 15px;
-  --border-gradient-onyx: linear-gradient( to bottom right, hsl(0, 0%, 25%) 0%, hsla(0, 0%, 25%, 0) 50% );
-  --bg-gradient-jet: linear-gradient( to bottom right, hsla(240, 1%, 18%, 0.251) 0%, hsla(240, 2%, 11%, 0) 100% ), hsl(240, 2%, 13%);
-  border-color: var(--border-gradient-onyx);
-  background: var(--bg-gradient-jet);
   margin-top: 30px;
-
-  -webkit-box-shadow: 0px 0px 10px 1px rgba(20,20,20,1);
-  -moz-box-shadow: 0px 0px 10px 1px rgba(20,20,20,1);
-  box-shadow: 0px 0px 10px 1px rgba(20,20,20,1);
+  height: 300px; /* Establece una altura fija para las cards */
+  overflow: hidden; 
 }
 
 .textos-portafolio{
-  text-align: center;
+  text-align: left;
+  width: 304px;
+  margin-bottom: 10px;
 }
+
 .capa img{
- 
- background-color: transparent;
- box-shadow: none;
- width: 100px;
- height: 100px;
- border-radius: 15px;
+ width: 30px;
+ height: 30px;
 }
 
 .capa{
-  border-radius: 20px;
+  border-radius: 15px;
   position: absolute;
   top:0px;
-  height: 100%;
+  height:194px;
   left: 0px;
-  width: 100%;
+  width: 304px;
   background:rgba(0,0,0,0.5) ;
   display: flex;
   justify-content: center;
@@ -718,13 +739,8 @@ box-shadow: 0px 0px 10px 1px rgba(20,20,20,1);
     gap: 30px;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    
   }
 
-  .ocupacion{
-    margin: 0;
-    padding: 0px;
-  }
 
   .perfil-info{
     display: flex;
@@ -787,7 +803,7 @@ box-shadow: 0px 0px 10px 1px rgba(20,20,20,1);
   }
 
   .ocupacion{
-    width: 60%;
+    width: 100% !important;
     margin-top: 25px;
   }
 }
@@ -809,7 +825,6 @@ box-shadow: 0px 0px 10px 1px rgba(20,20,20,1);
     align-items: center;
     padding: 40px;
   }
-
 
   .masInformacion{
     top: 0%;
@@ -841,15 +856,20 @@ box-shadow: 0px 0px 10px 1px rgba(20,20,20,1);
 }
 
 @media screen and (max-width: 774px){
+  .opciones span{
+    margin-right: 10px;
+  }
+
   .opciones{
-    display: block;
+    z-index: 100;
   }
 
   .headerDerecha{
-    display: inline;
+    display: relative;
     padding: 50px;
     align-items: center;
     width: 100%;
+    z-index: 100 !important;
   }
 
   .headerDerecha h1{
@@ -857,14 +877,55 @@ box-shadow: 0px 0px 10px 1px rgba(20,20,20,1);
     margin-top: 1px;
     margin-bottom: 20px;
     margin-left: 40%;
+    bottom: 0;
+    z-index: 100;
+  }
+
+  .textos-portafolio {
+    margin-top: 5px;
+    text-align: center;
   }
 
   .nav{
-    border-radius: 30px;
+    border-radius: 15px;
+top: 600px;  
+  left: 0;
+    position: fixed;
+    width: 100%;  
+    text-align: center;
+  }
+
+  .ocupacion p {
+    justify-content: center !important;
+    width: 100%;
+    text-align: center;
   }
 
   .linea-roja{
     width: 90%;
+  }
+
+  .textosP h2{
+    text-align: center;
+  }
+
+  .headerDerecha h1 {
+    margin: 0 !important;
+    width: 100%;
+    text-align: center !important;
+  }
+
+  .navbar-proyectos {
+    text-align: center; /* Alinea el contenido al centro */
+  }
+  
+  .navbar-proyectos ul {
+    justify-content: center; /* Centra los elementos horizontalmente */
+  }
+
+  .capa{
+    margin-left: 10px;
+    margin-top: 10px;
   }
 }
 
@@ -897,6 +958,10 @@ box-shadow: 0px 0px 10px 1px rgba(20,20,20,1);
 
 
 @media screen and (max-width: 537px){
+  .nav{
+    background-color: hsl(240, 2%, 12%) !important;
+  }
+
   .masInformacion{
     position: absolute;
     top: 0;
@@ -906,6 +971,7 @@ box-shadow: 0px 0px 10px 1px rgba(20,20,20,1);
   .tipoInfo{
     margin-left: 10px;
   }
+  
 
   .headerDerecha h1{
     margin-left: 25%;
@@ -913,6 +979,14 @@ box-shadow: 0px 0px 10px 1px rgba(20,20,20,1);
 
   .proyectos-card{
     padding: 10px;
+  }
+
+  .timeline{
+    margin: 10px auto;
+  }
+
+  .redes{
+    justify-content: center;
   }
 }
 
